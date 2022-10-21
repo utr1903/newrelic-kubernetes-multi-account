@@ -1,0 +1,6 @@
+name: mysql
+
+image: mysql:8.0
+port: 3306
+
+replicas: 2

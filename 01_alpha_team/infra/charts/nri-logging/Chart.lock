@@ -1,0 +1,6 @@
+dependencies:
+- name: common-library
+  repository: file://../nri-common-library
+  version: 1.0.4
+digest: sha256:7eef851ebd78082a87a54e21d77a8bc0986b78e7dc9912061676ece36e56b36e
+generated: "2022-07-04T13:33:21.001388+02:00"

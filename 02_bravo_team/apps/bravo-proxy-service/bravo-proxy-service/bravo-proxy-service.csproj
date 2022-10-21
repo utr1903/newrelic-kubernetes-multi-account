@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>bravo_proxy_service</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="NewRelic.Agent.Api" Version="10.0.0" />
+    <PackageReference Include="NewRelic.Agent" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="NewRelic.Agent" />
+    <None Remove="NewRelic.Agent.Api" />
+    <None Remove="Microsoft.AspNet.WebApi.Client" />
+    <None Remove="System.Text.Json" />
+    <None Remove="Microsoft.AspNetCore.Mvc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Persistence\" />
+    <Folder Include="Dtos\" />
+    <Folder Include="Services\Persistence\Data\" />
+    <Folder Include="Services\Persistence\Handlers\" />
+    <Folder Include="Services\Persistence\Handlers\Create\" />
+    <Folder Include="Services\Persistence\Handlers\Create\Dtos\" />
+    <Folder Include="Services\Persistence\Handlers\List\" />
+    <Folder Include="Services\Persistence\Handlers\List\Dtos\" />
+    <Folder Include="Services\Persistence\Handlers\Delete\" />
+    <Folder Include="Services\Persistence\Handlers\Delete\Dtos\" />
+  </ItemGroup>
+</Project>

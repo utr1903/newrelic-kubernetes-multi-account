@@ -1,0 +1,6 @@
+name: mongo
+
+image: mongo
+port: 27017
+
+replicas: 2

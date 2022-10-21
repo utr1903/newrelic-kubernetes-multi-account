@@ -1,0 +1,14 @@
+name: proxy
+port: 8080
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 1
+
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 50

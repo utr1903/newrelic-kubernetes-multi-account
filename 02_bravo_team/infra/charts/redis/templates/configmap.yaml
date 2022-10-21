@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: {{ .Values.name }}
+data:
+  master.conf: |
+    maxmemory 400mb
+    maxmemory-policy allkeys-lru
+    maxclients 20000
+    timeout 300
+    appendonly no
+    dbfilename dump.rdb
+    dir /data
+  slave.conf: |
+    replicaof {{ .Values.name }}.{{ .Values.namespace }}.svc.cluster.local {{ .Values.port }}
+    maxmemory 400mb
+    maxmemory-policy allkeys-lru
+    maxclients 20000
+    timeout 300
+    dir /data
